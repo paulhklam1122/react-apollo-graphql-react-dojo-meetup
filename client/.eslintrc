@@ -1,0 +1,43 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "extends": [
+    "standard",
+    "standard-react"
+  ],
+  "plugins": [
+    "babel",
+    "react",
+    "promise",
+    "bdd"
+  ],
+  "env": {
+    "browser" : true
+  },
+  "globals": {
+    "__DEV__"      : false,
+    "__TEST__"     : false,
+    "__STAGING__"  : false,
+    "__PROD__"     : false,
+    "__COVERAGE__" : false,
+    "__BROWSER_ENV__" : "",
+    "__ROLLBAR_API_KEY__" : ""
+  },
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "key-spacing"          : 0,
+    "jsx-quotes"           : [2, "prefer-single"],
+    "max-len"              : [2, 120, 2],
+    "object-curly-spacing" : [2, "always"],
+    "semi": "off",
+    "no-unused-vars": [2, {
+      "args": "none",
+      "vars": "all",
+      "ignoreRestSiblings": true
+    }],
+    "eqeqeq": [2, "smart"],
+    "bdd/focus": 2
+  }
+}
